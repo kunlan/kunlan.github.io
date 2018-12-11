@@ -66,6 +66,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-如何查看yum安装的软件路劲" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/11/如何查看yum安装的软件路劲/" class="article-date">
+  <time datetime="2018-12-11T07:32:25.000Z" itemprop="datePublished">2018-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/11/如何查看yum安装的软件路劲/">如何查看yum安装的软件路劲</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="以redis为例"><a href="#以redis为例" class="headerlink" title="以redis为例"></a>以redis为例</h1><ol>
+<li><p>首先安装一个redis<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis</p>
+</li>
+<li><p>查找redis的安装包<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis<br> redis-3.2.10-2.el7.x86_64 </p>
+</li>
+<li>查找安装包的安装路径<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -ql redis-3.2.10-2.el7.x86_64<br> /etc/logrotate.d/redis<br> /etc/redis-sentinel.conf<br> /etc/redis.conf<br> /etc/systemd/system/redis-sentinel.service.d<br> /etc/systemd/system/redis-sentinel.service.d/limit.conf<br> /etc/systemd/system/redis.service.d<br> /etc/systemd/system/redis.service.d/limit.conf<br> /usr/bin/redis-benchmark<br> /usr/bin/redis-check-aof<br> /usr/bin/redis-check-rdb<br> /usr/bin/redis-cli</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/" data-id="cjpjfq8i600015cs9hr5kb798" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-第一次用" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/30/第一次用/" class="article-date">
@@ -93,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/11/30/第一次用/" data-id="cjp3rhmzm0001nos99sozlkpx" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/11/30/第一次用/" data-id="cjpjfq8hj00005cs9sdrfcfp4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/11/30/hello-world/" data-id="cjp3rhmzd0000nos9k40ugko5" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/11/30/hello-world/" data-id="cjpjfq8i900025cs9ymsy8am7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,7 +209,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li></ul>
     </div>
   </div>
 
@@ -177,6 +220,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/11/如何查看yum安装的软件路劲/">如何查看yum安装的软件路劲</a>
+          </li>
         
           <li>
             <a href="/2018/11/30/第一次用/">第一次用</a>
