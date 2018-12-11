@@ -7,17 +7,17 @@
   
   <title>如何查看yum安装的软件路劲 | Codehole</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以redis为例 首先安装一个redis ` [root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包 ` [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis redis-3.2.10-2.el7.x86_64   查找安装包的安装路径 ` [root@iZbp1eem92">
+  <meta name="description" content="以redis为例 首先安装一个redis  1[root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包  1234567891011121314151617    [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis    redis-3.2.10-2.el7.x86_64">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何查看yum安装的软件路劲">
 <meta property="og:url" content="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/index.html">
 <meta property="og:site_name" content="Codehole">
-<meta property="og:description" content="以redis为例 首先安装一个redis ` [root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包 ` [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis redis-3.2.10-2.el7.x86_64   查找安装包的安装路径 ` [root@iZbp1eem92">
+<meta property="og:description" content="以redis为例 首先安装一个redis  1[root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包  1234567891011121314151617    [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis    redis-3.2.10-2.el7.x86_64">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-11T07:39:01.760Z">
+<meta property="og:updated_time" content="2018-12-11T07:43:18.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何查看yum安装的软件路劲">
-<meta name="twitter:description" content="以redis为例 首先安装一个redis ` [root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包 ` [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis redis-3.2.10-2.el7.x86_64   查找安装包的安装路径 ` [root@iZbp1eem92">
+<meta name="twitter:description" content="以redis为例 首先安装一个redis  1[root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis  查找redis的安装包  1234567891011121314151617    [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis    redis-3.2.10-2.el7.x86_64">
   
     <link rel="alternate" href="/atom.xml" title="Codehole" type="application/atom+xml">
   
@@ -91,17 +91,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="以redis为例"><a href="#以redis为例" class="headerlink" title="以redis为例"></a>以redis为例</h1><ol>
-<li><p>首先安装一个redis<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis</p>
+<li><p>首先安装一个redis</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@iZbp1eem925ojwyx17ao9kZ ~]# yum install redis</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>查找redis的安装包<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis<br> redis-3.2.10-2.el7.x86_64 </p>
+<li><p>查找redis的安装包</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -qa|grep redis</span><br><span class="line">    redis-3.2.10-2.el7.x86_64</span><br><span class="line">    ``` </span><br><span class="line">3. 查找安装包的安装路径</span><br><span class="line">    ``` </span><br><span class="line">    [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -ql redis-3.2.10-2.el7.x86_64</span><br><span class="line">    /etc/logrotate.d/redis</span><br><span class="line">    /etc/redis-sentinel.conf</span><br><span class="line">    /etc/redis.conf</span><br><span class="line">    /etc/systemd/system/redis-sentinel.service.d</span><br><span class="line">    /etc/systemd/system/redis-sentinel.service.d/limit.conf</span><br><span class="line">    /etc/systemd/system/redis.service.d</span><br><span class="line">    /etc/systemd/system/redis.service.d/limit.conf</span><br><span class="line">    /usr/bin/redis-benchmark</span><br><span class="line">    /usr/bin/redis-check-aof</span><br><span class="line">    /usr/bin/redis-check-rdb</span><br><span class="line">    /usr/bin/redis-cli</span><br></pre></td></tr></table></figure>
 </li>
-<li>查找安装包的安装路径<br> <code>`</code> [root@iZbp1eem925ojwyx17ao9kZ ~]# rpm -ql redis-3.2.10-2.el7.x86_64<br> /etc/logrotate.d/redis<br> /etc/redis-sentinel.conf<br> /etc/redis.conf<br> /etc/systemd/system/redis-sentinel.service.d<br> /etc/systemd/system/redis-sentinel.service.d/limit.conf<br> /etc/systemd/system/redis.service.d<br> /etc/systemd/system/redis.service.d/limit.conf<br> /usr/bin/redis-benchmark<br> /usr/bin/redis-check-aof<br> /usr/bin/redis-check-rdb<br> /usr/bin/redis-cli</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/" data-id="cjpjfq8i600015cs9hr5kb798" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/" data-id="cjpjfvyhr000114s9gelp49ip" class="article-share-link">Share</a>
       
       
     </footer>
