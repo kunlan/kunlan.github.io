@@ -66,6 +66,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-centos-7防火墙firewalld" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/12/centos-7防火墙firewalld/" class="article-date">
+  <time datetime="2018-12-12T07:17:32.000Z" itemprop="datePublished">2018-12-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/12/centos-7防火墙firewalld/">centos 7防火墙firewalld</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、firewalld的基本使用<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
+<p>2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。<br>启动一个服务：systemctl start firewalld.service<br>关闭一个服务：systemctl stop firewalld.service<br>重启一个服务：systemctl restart firewalld.service<br>显示一个服务的状态：systemctl status firewalld.service<br>在开机时启用一个服务：systemctl enable firewalld.service<br>在开机时禁用一个服务：systemctl disable firewalld.service<br>查看服务是否开机启动：systemctl is-enabled firewalld.service<br>查看已启动的服务列表：systemctl list-unit-files|grep enabled<br>查看启动失败的服务列表：systemctl –failed</p>
+<p>3.配置firewalld-cmd</p>
+<p>查看版本： firewall-cmd –version<br>查看帮助： firewall-cmd –help<br>显示状态： firewall-cmd –state<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>更新防火墙规则： firewall-cmd –reload<br>查看区域信息:  firewall-cmd –get-active-zones<br>查看指定接口所属区域： firewall-cmd –get-zone-of-interface=eth0<br>拒绝所有包：firewall-cmd –panic-on<br>取消拒绝状态： firewall-cmd –panic-off<br>查看是否拒绝： firewall-cmd –query-panic<br>查看打开的服务: firewall-cmd –list-services<br>查看可以打开的服务: firewall-cmd –get-services<br>打开服务: firewall-cmd –add-service –permanent(永久)</p>
+<p>那怎么开启一个端口呢<br>添加<br>firewall-cmd –zone=public –add-port=80/tcp –permanent    （–permanent永久生效，没有此参数重启后失效）<br>重新载入<br>firewall-cmd –reload<br>查看<br>firewall-cmd –zone= public –query-port=80/tcp<br>删除<br>firewall-cmd –zone= public –remove-port=80/tcp –permanent</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/kunlan/2018/12/12/centos-7防火墙firewalld/" data-id="cjpkumz6w0000dos9jkjwav8w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-如何查看yum安装的软件路劲" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/11/如何查看yum安装的软件路劲/" class="article-date">
@@ -99,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/" data-id="cjpjg6y7u0001zos9nssp1bp1" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/12/11/如何查看yum安装的软件路劲/" data-id="cjpkumz7v0002dos9qznuw3pk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/11/30/第一次用/" data-id="cjpjg6y7x0002zos9ju7qtvmb" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/11/30/第一次用/" data-id="cjpkumz790001dos9xnglj9go" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/11/30/hello-world/" data-id="cjpjg6y7o0000zos95wmdd6w0" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/11/30/hello-world/" data-id="cjpkumz880003dos9kvjbxcf0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,6 +261,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/12/centos-7防火墙firewalld/">centos 7防火墙firewalld</a>
+          </li>
         
           <li>
             <a href="/2018/12/11/如何查看yum安装的软件路劲/">如何查看yum安装的软件路劲</a>
