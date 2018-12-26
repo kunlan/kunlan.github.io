@@ -5,19 +5,19 @@
   
 
   
-  <title>centos 7防火墙firewalld | Codehole</title>
+  <title>how to use github&amp;markdown | Codehole</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、firewalld的基本使用启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewalld开机启用  ： systemctl enable firewalld 2.systemctl是CentOS7的服务管理工">
+  <meta name="description" content="issue:讨论bug,疑问等,标题要突出主题assigned:由仓库管理员指派,改issue有被指派的人维护,可以关闭改issuepull request:请求合并自己的更改pull request流程:首先要create branch,然后在自己创建的branch里更改,然后点击create pull request, base选择master,compiler选择自己的branch,写com">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos 7防火墙firewalld">
-<meta property="og:url" content="https://github.com/kunlan/2018/12/12/centos-7防火墙firewalld/index.html">
+<meta property="og:title" content="how to use github&amp;markdown">
+<meta property="og:url" content="https://github.com/kunlan/2018/12/26/how-to-use-github-markdown/index.html">
 <meta property="og:site_name" content="Codehole">
-<meta property="og:description" content="1、firewalld的基本使用启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewalld开机启用  ： systemctl enable firewalld 2.systemctl是CentOS7的服务管理工">
+<meta property="og:description" content="issue:讨论bug,疑问等,标题要突出主题assigned:由仓库管理员指派,改issue有被指派的人维护,可以关闭改issuepull request:请求合并自己的更改pull request流程:首先要create branch,然后在自己创建的branch里更改,然后点击create pull request, base选择master,compiler选择自己的branch,写com">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-12T07:23:49.903Z">
+<meta property="og:updated_time" content="2018-12-26T07:29:28.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos 7防火墙firewalld">
-<meta name="twitter:description" content="1、firewalld的基本使用启动： systemctl start firewalld关闭： systemctl stop firewalld查看状态： systemctl status firewalld开机禁用  ： systemctl disable firewalld开机启用  ： systemctl enable firewalld 2.systemctl是CentOS7的服务管理工">
+<meta name="twitter:title" content="how to use github&amp;markdown">
+<meta name="twitter:description" content="issue:讨论bug,疑问等,标题要突出主题assigned:由仓库管理员指派,改issue有被指派的人维护,可以关闭改issuepull request:请求合并自己的更改pull request流程:首先要create branch,然后在自己创建的branch里更改,然后点击create pull request, base选择master,compiler选择自己的branch,写com">
   
     <link rel="alternate" href="/atom.xml" title="Codehole" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-centos-7防火墙firewalld" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-how-to-use-github-markdown" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/12/12/centos-7防火墙firewalld/" class="article-date">
-  <time datetime="2018-12-12T07:17:32.000Z" itemprop="datePublished">2018-12-12</time>
+    <a href="/2018/12/26/how-to-use-github-markdown/" class="article-date">
+  <time datetime="2018-12-26T07:06:30.000Z" itemprop="datePublished">2018-12-26</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      centos 7防火墙firewalld
+      how to use github&amp;markdown
     </h1>
   
 
@@ -90,16 +90,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、firewalld的基本使用<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
-<p>2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。<br>启动一个服务：systemctl start firewalld.service<br>关闭一个服务：systemctl stop firewalld.service<br>重启一个服务：systemctl restart firewalld.service<br>显示一个服务的状态：systemctl status firewalld.service<br>在开机时启用一个服务：systemctl enable firewalld.service<br>在开机时禁用一个服务：systemctl disable firewalld.service<br>查看服务是否开机启动：systemctl is-enabled firewalld.service<br>查看已启动的服务列表：systemctl list-unit-files|grep enabled<br>查看启动失败的服务列表：systemctl –failed</p>
-<p>3.配置firewalld-cmd</p>
-<p>查看版本： firewall-cmd –version<br>查看帮助： firewall-cmd –help<br>显示状态： firewall-cmd –state<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>更新防火墙规则： firewall-cmd –reload<br>查看区域信息:  firewall-cmd –get-active-zones<br>查看指定接口所属区域： firewall-cmd –get-zone-of-interface=eth0<br>拒绝所有包：firewall-cmd –panic-on<br>取消拒绝状态： firewall-cmd –panic-off<br>查看是否拒绝： firewall-cmd –query-panic<br>查看打开的服务: firewall-cmd –list-services<br>查看可以打开的服务: firewall-cmd –get-services<br>打开服务: firewall-cmd –add-service –permanent(永久)</p>
-<p>那怎么开启一个端口呢<br>添加<br>firewall-cmd –zone=public –add-port=80/tcp –permanent    （–permanent永久生效，没有此参数重启后失效）<br>重新载入<br>firewall-cmd –reload<br>查看<br>firewall-cmd –zone= public –query-port=80/tcp<br>删除<br>firewall-cmd –zone= public –remove-port=80/tcp –permanent</p>
+        <p>issue:讨论bug,疑问等,标题要突出主题<br>assigned:由仓库管理员指派,改issue有被指派的人维护,可以关闭改issue<br>pull request:请求合并自己的更改<br>pull request流程:首先要create branch,然后在自己创建的branch里更改,<br>然后点击create pull request, base选择master,compiler选择自己的branch,写commit message,<br>接着create pull request.等待或讨论这个变更,被通过后就可以 合并merge,合并完后那个分支branch<br>就没用了,可以删掉delete branch.</p>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#h1#</span><br><span class="line">##h2##</span><br><span class="line">###h3###</span><br><span class="line">- [ ] 未选中</span><br><span class="line">- [x] 选中</span><br><span class="line">![图片描述](图片链接)</span><br><span class="line">[描述](链接)</span><br><span class="line">有序列:</span><br><span class="line">1.</span><br><span class="line">2.</span><br><span class="line">3.</span><br><span class="line">无序列</span><br><span class="line">*</span><br><span class="line">*</span><br><span class="line">*</span><br><span class="line">*斜体*</span><br><span class="line">**粗体**</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/kunlan/2018/12/12/centos-7防火墙firewalld/" data-id="cjq4v03vn00026gs91wkw34tv" class="article-share-link">Share</a>
+      <a data-url="https://github.com/kunlan/2018/12/26/how-to-use-github-markdown/" data-id="cjq4v03va00006gs9zocwawpw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +105,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/12/26/how-to-use-github-markdown/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          how to use github&amp;markdown
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/11/如何查看yum安装的软件路劲/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/12/12/centos-7防火墙firewalld/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">如何查看yum安装的软件路劲</div>
+      <div class="article-nav-title">centos 7防火墙firewalld</div>
     </a>
   
 </nav>
